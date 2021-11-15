@@ -1,4 +1,11 @@
 __pycache__
 .vscode
 dist
-*egg-info
+*egg-info*
+
+.coverage
+*.csv
+*.pyc
+
+_build
+htmlcov
