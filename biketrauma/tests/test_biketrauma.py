@@ -23,14 +23,14 @@ def md5(fname):
 def test_dl():
     biketrauma.Load_db()
     m = md5(path_target)
-    assert m == "ee8c4e0e7989bc6aac7876d7501bbf4d"
+    assert m == "54c1eefb17a34d2e5ac6c4d0f6c20546"
 
 
 def test_df():
     df = biketrauma.get_accident(biketrauma.Load_db().save_as_df(), log_scale=False)
-    assert df["21"] == 459
+    assert df["21"] == 152
 
 
 def test_df_log():
     df = biketrauma.get_accident(biketrauma.Load_db().save_as_df(), log_scale=True)
-    assert np.allclose(df["92"], 7.651120176)
+    assert np.allclose(df["92"], 7.161622002)

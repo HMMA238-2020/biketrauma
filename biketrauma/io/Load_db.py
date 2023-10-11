@@ -23,6 +23,8 @@ class Load_db:
 
     def unxz(self, fname_compressed):
         fname_uncompressed = fname_compressed[:-3]
+
+        # do nothing if uncompressed file exists
         if os.path.exists(fname_uncompressed):
             return fname_uncompressed
 
@@ -35,7 +37,6 @@ class Load_db:
                 f.write(file_content)
 
         return fname_uncompressed
-
 
     def save_as_df(self):
         df_bikes = pd.read_csv(
