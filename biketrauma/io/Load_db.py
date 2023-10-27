@@ -44,5 +44,6 @@ class Load_db:
             na_values="",
             low_memory=False,
             converters={"data": str, "heure": str},
+            encoding="latin-1"
         )
         return df_bikes
